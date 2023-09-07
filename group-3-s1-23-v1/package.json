@@ -1,0 +1,35 @@
+{
+  "name": "cs719-final-project-app",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "npm run build-css & node app.js",
+    "build-css": "sass public/sass/main.scss public/css/main.css",
+    "watch-css": "sass --watch public/sass:public/css",
+    "dev": "nodemon app.js & npm run watch-css"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "chart.js": "^4.3.0",
+    "cookie-parser": "^1.4.5",
+    "dompurify": "^3.0.3",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-handlebars": "^5.3.4",
+    "express-session": "^1.17.3",
+    "jimp": "^0.16.1",
+    "multer": "^1.4.5-lts.1",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0",
+    "quill": "^1.3.7",
+    "sass": "^1.62.1",
+    "sql-template-strings": "^2.2.2",
+    "sqlite": "^4.1.2",
+    "sqlite3": "^5.1.2",
+    "typed.js": "^2.0.16",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}

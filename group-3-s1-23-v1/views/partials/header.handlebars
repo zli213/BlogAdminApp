@@ -1,0 +1,38 @@
+{{!-- {{!
+Guide to Handlebars Partials in this Project:
+
+Handlebars is a templating language that allows us to build semantic templates effectively with no frustration. One of
+its powerful features is 'partials'.
+
+A 'partial' in Handlebars is a snippet of HTML that can be reused in multiple places. This allows us to avoid
+duplication, enhance readability, and ease maintenance.
+
+Partials are registered using the following syntax:
+
+Handlebars.registerPartial('partialName', 'partial template')
+
+Once registered, they can be used within other templates using the following syntax:
+
+{{> partialName}}
+
+In this project, we use partials extensively for common sections of the website. Here are some examples:
+
+{{! This is the header partial that contains the website's header section. It includes the navigation menu and logo. }}
+{{> header}}
+
+{{! This is the footer partial that contains the website's footer section. It includes copyright information and links
+to other pages. }}
+{{> footer}}
+
+Please consider using and extending the existing partials before creating new sections from scratch. If you need to
+create a new partial, remember to register it before using it. --}}
+
+<!-- Header -->
+<header class="header" id="header">    
+    {{#if isAuthenticated}}
+        {{> signedInHeader}}
+    {{else}}
+        {{> signedOutHeader}}
+    {{/if}}
+</header>
+<!-- End Header -->

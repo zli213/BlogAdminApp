@@ -1,0 +1,173 @@
+.personalPage_container {
+    display: flex;
+    flex-direction: column;
+    grid-template-areas: "article personalArea";
+    align-items: center;
+    margin: 8rem 8rem 6rem 8rem;
+}
+
+.articleList-authorPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80vw;
+    margin: 10px;
+}
+
+.countLikes-authotPage {
+    color: var(--color-1);
+}
+
+.articleList-authorPage>h2 {
+    text-align: center;
+}
+
+.articleList2 {
+    grid-area: article;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 10px;
+}
+
+
+.artcleArea {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 200px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    box-shadow: 0 0 10px gray;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+
+
+.textArea {
+    margin: var(--margin-sm);
+    width: 70vw;
+    width: 680px; /* 设置 div 的宽度 */
+    height: 155px; /* 设置 div 的高度 */
+    overflow: hidden; /* 隐藏超出部分的内容 */
+    text-overflow: ellipsis; /* 添加省略号以表示被截断的文本 */
+}
+
+.aimg1 {
+    width: 30%;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px
+}
+
+.title {
+    margin: 2px;
+    font-size: var(--font-size-md);
+    word-break: break-all;
+}
+
+.time {
+    margin: 2px;
+    font-size: var(--font-size-xsm);
+}
+
+.content {
+    margin: 2px;
+    margin-top: 6px;
+    font-size: var(--font-size-xsm);
+
+}
+
+.like {
+    margin: 2px;
+}
+
+.comment {
+    margin: 2px;
+}
+
+
+.personal_area {
+    grid-area: personalArea;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.persnal_information {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pimg {
+    margin-top: 3rem;
+    border-radius: 50%;
+}
+
+.pUsername {
+    margin: 2px;
+}
+
+.pDescription {
+    margin: 2px;
+}
+
+.pDescription {
+    margin: 2px;
+}
+
+
+.recentArticle {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid gray;
+    border-radius: 10px;
+    box-shadow: 0 0 10px gray;
+    gap: 8px;
+    height: 300px;
+}
+
+.recentAreaChild {
+    margin-left: 8px;
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+}
+
+.recentAreaChildText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title1 {
+    margin: 10px;
+    margin-bottom: 2px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .personalPage_container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .artcleArea {
+        flex-direction: column;
+        height: auto;
+        justify-content: center;
+    }
+
+    .textArea {
+        width: 100%;
+        margin: 5px;
+    }
+
+    .aimg1 {
+        width: 100%;
+        border-radius: 0;
+    }
+}

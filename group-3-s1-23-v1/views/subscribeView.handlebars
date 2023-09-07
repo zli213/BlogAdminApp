@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Subscribe/Unsubscribe Example</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+{{> header}}
+
+{{> sidenavbar}}
+
+<div id="subscriber_container">
+  <div><h1 id="titleOfSubscribers" >Subscribers</h1></div>
+
+  {{#if subscribers}}
+  {{#each subscribers}}
+
+  <div class="subscriber_list">
+    <div class="pic">
+      <a href="/authorPage">
+        <a href="/authorPage/{{this.subscriber}}"><img class="icon" src={{this.avatar_src}} width="100"
+            height="100"></a>
+      </a>
+    </div>
+    <div id="text_area">
+      <p class="username"><strong>{{this.username}}</strong></p>
+      <p class="descriptionarea">{{this.description}}</p>
+    </div>
+    <div>
+      <button data-subscriber-id="{{this.id}}" class="subscribe_button"
+        onclick="handleClickSubscribeButton(event)">{{#if
+        this.mutualSubscription}}unsubscribe{{else}}subscribe{{/if}}</button>
+    </div>
+  </div>
+  {{/each}}
+  {{/if}}
+</div>
+
+{{> footer}}
+
+<script src="/js/subscribe.js"></script>
+<script>
+  function toggleSubscription(button) {
+    if (button.innerHTML === 'unsubscribe') {
+      button.innerHTML = 'subscribe';
+      button.style.backgroundColor = '#ff7383';
+    } else {
+      button.innerHTML = 'unsubscribe';
+      button.style.backgroundColor = 'grey';
+    }
+  }
+</script>

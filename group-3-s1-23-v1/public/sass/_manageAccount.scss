@@ -1,0 +1,127 @@
+.manageAccount-form-container{
+    width: 60%;
+    margin: auto;
+    
+}
+.manageAccount-form-container>label{
+    width: 50%;
+    
+}
+#manageAccount-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    grid-gap: var(--gap);
+}
+
+#manageAccount-form label {
+  color: var(--light-color);
+  margin-bottom: var(--gap);
+}
+
+#manageAccount-form input[type="text"], 
+#manageAccount-form input[type="password"], 
+#manageAccount-form input[type="date"],
+#manageAccount-form textarea {
+  padding: var(--margin-sm);
+  background-color: var(--primary-background-color);
+  border: 1px solid var(--transparent-light-color);
+  border-radius: var(--gap);
+}
+
+#manageAccount-form button {
+  padding: var(--margin-sm) 0;
+  border-radius: 5px;
+  background-color: var(--color-1);
+  color: var(--hover-light-color);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#manageAccount-form button:hover {
+  background-color: var(--color-5);
+  color: var(--hover-light-color);
+}
+#manageBtnContainer{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap; 
+  justify-content: space-between;
+  margin-top: 20px;
+  width: 100%; 
+  grid-column: 1 / span 2;
+  margin-bottom: 10rem
+}
+
+#manageAccount-form button {
+  display: inline-block; 
+  margin-right: 10px;
+  padding: var(--margin-sm) 0;
+  border-radius: 5px;
+  background-color: var(--color-1);
+  color: var(--hover-light-color);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#manageAccount-form button:last-child {
+  margin-right: 0;
+}
+#editAccountBtn {
+  grid-column: 1 / span 2;
+  width: 30%;
+  
+}
+
+.reset-edit-button {
+  grid-column: 1 / span 2;
+  width: 30%;
+}
+.delete-account-button {
+  grid-column: 1 / span 2;
+  width: 30%;
+}
+#uploadNewAvatar{
+  margin-top: 30px;
+}
+
+.username-availability {
+  grid-column: 2;
+}
+
+.passwords-match {
+  grid-column: 2;
+}
+
+.change-Password-form {
+  visibility: hidden;
+  grid-column: 2;
+}
+
+.change-avatar-options {
+  display: none;
+}
+
+.change-Password-form[disabled] {
+  visibility: hidden;
+  display: none;
+}
+.change-avatar-options[disabled] {
+  visibility: hidden;
+  display: none;
+}
+
+.change-avatar-options img {
+    height: 10rem;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color 0.3s;
+}
+
+#change-password-button:active{
+    background-color: var(--color-5);
+}
+
+  
+

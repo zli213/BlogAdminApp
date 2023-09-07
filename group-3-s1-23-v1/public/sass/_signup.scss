@@ -1,0 +1,78 @@
+/* Sign up CSS */
+.signup-form-container {
+  background-color: var(--secondary-background-color);
+  padding: var(--margin-md);
+  margin: 100px auto var(--margin-md);
+  border-radius: var(--gap);
+  max-width: 40%;
+  width: 40%;
+}
+
+#signup-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: var(--gap);
+  align-items: center;
+}
+
+#signup-form label {
+  color: var(--light-color);
+  margin-bottom: var(--gap);
+}
+
+#signup-form input[type="text"],
+#signup-form input[type="password"],
+#signup-form input[type="date"],
+#signup-form textarea {
+  padding: var(--margin-sm);
+  background-color: var(--primary-background-color);
+  border: 1px solid var(--transparent-light-color);
+  border-radius: var(--gap);
+}
+
+.avatar-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#signup-form button {
+  height: 40px;
+  padding: 10px 0;
+  border-radius: 5px;
+  background-color: var(--color-1);
+  color: var(--hover-light-color);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#signup-form button:hover {
+  background-color: var(--color-5);
+  color: var(--hover-light-color);
+}
+
+/* Set the size of the avatar images */
+.avatar-image {
+  height: 10rem;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border-color 0.3s;
+}
+
+/* Set the border color for selected image */
+.avatar-radio:checked + .avatar-option-label img {
+  border-color: var(--color-5);
+}
+
+/* Adjust the margin between avatar options */
+.avatar-option-label {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+/* Hide the radio buttons */
+.avatar-radio {
+  display: none;
+}

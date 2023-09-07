@@ -1,0 +1,91 @@
+
+   {{> header}}
+   
+
+       
+    <div class="middle_part">
+        {{> sidenavbar}}
+        <div class="userPageContent">
+            <h1>Analytics</h1>
+            <div id="analyticsContainer">
+              <div class="tab">
+                <button class="tablinks" onclick="openTab(event, 'keySummaryTab')" id="defaultOpen">Key Summary</button>
+                <button class="tablinks" onclick="openTab(event, 'top3Tab')">Top 3 Articles</button>
+                <button class="tablinks" onclick="openTab(event, 'chartTab')">Comment Trending Chart</button>
+              </div>
+
+              <div id="keySummaryTab" class="tabcontent">
+                <div id="keySummary">
+                  <h2 class="analyticsHeading">Key Summary</h2>
+                  <div id="summaryContainer">
+                      <div class="keyItem">
+                          <h3>#Subscribers</h3>
+                          <p>{{userSubscribers}}</p>
+                      </div>
+                      <div class="keyItem">
+                          <h3>#Comments</h3>
+                          <p>{{userTotalNumOfComments}}</p>
+                      </div>
+                      <div class="keyItem">
+                          <h3>#Likes</h3>
+                          <p>{{userTotalNumOfLikes}}</p>
+                      </div>
+                  </div>
+                </div>
+              </div>
+
+              <div id="top3Tab" class="tabcontent">
+                <div id="top3Articles">
+                    <h2 class="analyticsHeading">Top 3 Articles</h2> 
+                    <div id="top3Container">
+                      {{#if userTop3Articles}}
+                      <ul>
+                        {{#each userTop3Articles}}
+                        
+                        <li>
+                          <a href="/articlePage?id={{this.id}}">
+                          <div class="popularArticle">
+                            <div id="rank"><span>{{incremented @index}}</span></div>
+                            <div class="middle">
+                                <h3 id="top3Title">{{this.title}}</h3>
+                                <div id="detailInfo">
+                                  <p id="likes"><img src="./images/favorite.svg" alt="">{{this.likes}}</p>
+                                  <p id="comments"><img src="./images/comment.svg" alt="">{{this.comments}}</p>
+                                  <p id="popularity">popularity : <span>{{this.popularity}}</span></p>
+                                </div>
+                                <p id="date">{{this.date}}</p>
+                            </div>
+                            <div id="articleThumbnail"><img src="{{this.image_src}}" alt=""></div>
+                          </div>
+                          </a>
+                        </li>
+                        
+                        {{/each}}
+                      </ul>
+                      {{else}}
+                      <p>No result</p>
+                      {{/if}}
+                    </div>
+                  </div>
+                </div>
+
+              <div id="chartTab" class="tabcontent">
+                <h2 class="analyticsHeading">Comment Trending Chart</h2>
+                    <div id="chartContainer">
+                        <canvas id="myChart"></canvas> 
+                    </div>
+              </div>
+
+    </div>
+  </div>
+  </div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.0/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.0.1"></script>
+<script src="/js/analytics.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/handlebars/dist/handlebars.min.js"></script>
+
+
+
+
+

@@ -1,0 +1,89 @@
+#Subscriber_container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+    margin-bottom: 60px;
+    margin-left: 25vw;
+    margin-right: 80px;
+    gap: 20px;
+    width: 70vw;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.subscriber_list{
+    display: flex;
+    align-items: center;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    height: 150px;
+    box-shadow: 5px 5px 5px #7b95f2;
+    background-color: #e8eafb;
+    padding: 2rem;
+    gap: var(--gap);
+}
+
+.subscriber_list>.pic>a>img{
+    border-radius: 50%;
+}
+
+#titleOfSubscribers{
+    margin-top: 40px;
+    margin-bottom: 35px;
+}
+
+#text_area{
+    width: 80%;
+    margin-left: 5px;
+}
+
+.username{
+    font-size: 20px;
+    margin-bottom: 0;
+}
+
+.descriptionarea{
+    margin-top: 0;
+}
+
+.icon{
+    margin: 10px;
+    margin-right: 0px;
+}
+.subscribe_button{
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-top: 10px;
+    background-color: #ff7383;
+    color: var(--hover-light-color);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.subscribe_button:hover {
+    background-color:  #8492e8;
+    color: var(--hover-light-color);
+}
+
+@media screen and (max-width: 768px) {
+    #subscriber_container {
+      /* 修改样式规则，使元素在小屏幕下适应 */
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  
+    .subscriber_list {
+      /* 修改样式规则，使元素在小屏幕下适应 */
+      flex-direction: column;
+      height: auto;
+    }
+  
+    .subscriber_list > .pic > a > img {
+      /* 修改样式规则，使元素在小屏幕下适应 */
+      margin-right: 0;
+    }
+  }
+  
+  

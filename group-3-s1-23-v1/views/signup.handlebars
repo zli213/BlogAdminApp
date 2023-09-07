@@ -1,0 +1,56 @@
+{{> header}}
+
+<div class="signup-form-container">
+
+    <form id="signup-form" action="/auth/signup" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <p id="username-availability" class="username-availability"></p>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="re-password">Re-Enter Password:</label>
+        <input type="password" id="re-password" name="re-password" required>
+        <p id="passwords-match" class="passwords-match"></p>
+
+        <label for="first-name">First Name:</label>
+        <input type="text" id="first-name" name="fname" required>
+
+        <label for="last-name">Last Name:</label>
+        <input type="text" id="last-name" name="lname" required>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+
+        <label for="description">Brief Description:</label>
+        <textarea id="description" name="description" required></textarea>
+
+        <label for="avatar">Choose Avatar:</label>
+        <div class="avatar-options">
+        <input type="radio" id="avatar1" name="avatarSrc" class="avatar-radio" value="/images/avatar1.svg">
+        <img src="/images/avatar1.svg" id="img-avatar1" class="avatar-image">
+
+        <input type="radio" id="avatar2" name="avatarSrc" class="avatar-radio" value="/images/avatar2.svg">
+        <img src="/images/avatar2.svg" id="img-avatar2" class="avatar-image">
+
+        <input type="radio" id="avatar3" name="avatarSrc" class="avatar-radio" value="/images/avatar3.svg">
+        <img src="/images/avatar3.svg" id="img-avatar3" class="avatar-image">
+
+        <input type="radio" id="avatar4" name="avatarSrc" class="avatar-radio" value="/images/avatar4.svg">
+        <img src="/images/avatar4.svg" id="img-avatar4" class="avatar-image">
+
+        <input type="radio" id="avatar5" name="avatarSrc" class="avatar-radio" value="/images/avatar5.svg">
+        <img src="/images/avatar5.svg" id="img-avatar5" class="avatar-image">
+
+        <input type="radio" id="avatar6" name="avatarSrc" class="avatar-radio" value="/images/avatar6.svg">
+        <img src="/images/avatar6.svg" id="img-avatar6" class="avatar-image">
+        </div>
+
+
+        <button class="first-button" type="submit">Submit</button>
+
+        <button class="second-button" type="reset">Reset</button>
+    </form>
+</div>
+<script src="/js/signup.js"></script>

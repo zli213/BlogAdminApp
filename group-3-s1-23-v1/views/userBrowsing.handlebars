@@ -1,0 +1,53 @@
+    {{> header}}
+    
+       
+    <div class="middle_part">
+        {{> sidenavbar}}
+
+        <div class="userPageContent">
+            <h1>My articles</h1>
+            <div id="filterBar">
+                <div>
+                    <p>Total Articles: <span>{{numOfArticles}}</span></p>
+                </div>
+
+            {{!--sorting --}} 
+            <div>
+                <form action="/userBrowsing" method="GET">
+                <label for="sortArticles">Sort By:</label>
+                <select id="sortArticles" name="sortOption" onchange="this.form.submit()">
+                    <option value="">Default</option>
+                    <option value="date" {{isSelected 'date' queryPart}}>Date</option>
+                    <option value="title" {{isSelected 'title' queryPart}}>Title</option>
+                </select>
+                </form>
+            </div>
+            {{!--sorting --}}
+                
+            </div>
+            <div id="articleContainer">
+                {{#if userArticles}}
+                <ul>
+                    {{#each userArticles}}
+                    
+                        <li>
+                            <a href="/articlePage?id={{this.id}}">
+                            <div id="eachArticle">
+                                <div class="article-header"><img src="{{this.image_src}}" alt="" id="contentImg"></div>
+                                <div class="article-body">
+                                    <h2 class="article-title">{{this.title}}</h2>
+                                    <p class="article-date">{{this.date}}</p>
+                                </div>
+                            </div>
+                            </a>
+                        </li>
+                    
+                    {{/each}}
+                </ul>
+                {{else}}
+                <p>No result</p>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+

@@ -1,0 +1,306 @@
+.article-articlePage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8rem;
+    width: 100%;
+    overflow-x: hidden;
+
+}
+
+.article-articlePage>.article-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 15rem 10rem;
+    width: 100%;
+}
+
+.article-header-articlePage {
+    text-align: center;
+}
+
+.article-header-articlePage>h1 {
+    font-size: var(--font-size-xl);
+}
+
+.article-body-articlePage>h2 {
+    text-align: center;
+}
+
+.article-body-articlePage>ul {
+    list-style: disc;
+}
+
+/* Make the picture center in the page and give it some corner and shadow */
+.article_image {
+    width: 40rem;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: var(--margin-sm);
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--light-color-alt);
+}
+
+.article-content p {
+    margin: var(--margin-sm) 0;
+    font-size: var(--font-size-md);
+}
+
+.btn-icon {
+    font-size: var(--font-size-sm);
+}
+
+.heart-icon-path1 {
+    fill: var(--light-color-alt);
+}
+
+.heart-icon-path2 {
+    fill: var(--color-1);
+    display: none;
+}
+
+
+.btn.btn-like.liked .heart-icon-path1 {
+    display: none;
+}
+
+.btn.btn-like.liked .heart-icon-path2 {
+    display: block;
+}
+
+.article-meta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.athor-avatar {
+    margin-right: 10px;
+}
+
+.user-avatar {
+    margin-right: 10px;
+}
+
+.article-infor01,
+.article-infor02 {
+    height: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.comment-infor01 .comment-infor02 {
+    height: 2rem;
+    display: flex;
+    align-items: flex-start;
+}
+
+.article-infor01 {
+    justify-content: flex-start;
+}
+
+.article-infor02 {
+    justify-content: flex-start;
+    margin-top: 1px;
+}
+
+.comment-infor02 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    margin-right: 5px;
+}
+
+.btn-comment {
+    margin-left: 5px;
+}
+
+.btn-follow {
+    color: var(--color-1);
+    background-color: var(primary-background-color);
+    width: 8rem;
+    transition: transform 0.3s ease;
+    border-radius: 15px;
+}
+
+.btn-follow:hover {
+    transform: scale(1.25);
+    margin-right: 10px;
+    width: 9rem;
+}
+
+.btn-like {
+    color: var(--light-color-alt);
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+}
+
+.btn-like:hover {
+    transform: scale(1.25);
+    margin: 0 10px;
+}
+
+.btn-follow.subscribed .btn-text {
+    color: var(--color-5);
+    width: 9rem;
+}
+
+.btn-comment {
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+}
+
+.btn-comment:hover {
+    transform: scale(1.25);
+    margin: 0 10px;
+
+}
+
+.sidebar-articlePage {
+    display: none;
+}
+
+.article-articlePage>.sidebar-articlePage {
+    padding-top: 0px;
+    padding-left: 0px;
+}
+
+.sidebar-articlePage.show {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40rem;
+    height: auto;
+    background-color: var(--secondary-background-color);
+    transition: right 0.3s ease;
+    box-shadow: 0 0 10px var(--light-color-alt);
+    margin-top: 88px;
+    border-radius: 1%;
+}
+
+.sidebar-content {
+    height: 100%;
+    overflow-y: auto;
+    margin-bottom: var(--margin-md);
+    padding: 10px;
+}
+
+.sidebar-header {
+    margin-bottom: 15px;
+}
+
+.comment-list {
+    list-style-type: none;
+    padding: 10px;
+    margin-bottom: var(--margin-sm);
+    border-top: 1px solid #ccc;
+
+}
+
+.comment-list li {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+
+}
+
+.sidebar-close>btn-close {
+    border-color: var(--light-color-alt);
+    margin-top: var(--margin-sm);
+}
+
+.comment-input {
+    position: relative;
+    align-items: stretch;
+    background-color: var(--primary-background-color);
+    border-radius: 5px;
+    box-shadow: 0 0 10px var(--light-color);
+}
+
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 5px;
+}
+
+.btn-cancel {
+    margin-right: 5px;
+    margin-bottom: 10px;
+}
+
+.btn-submit {
+    margin-right: 5px;
+    margin-bottom: 10px;
+    width: 8rem;
+    height: 3rem;
+
+    color: var(--primary-background-color);
+    background-color: var(--color-5);
+    border-radius: 15px;
+    box-shadow: 0 0 10px var(--light-color-alt);
+}
+
+
+/* end */
+.input-comment {
+    width: 100%;
+    height: 10rem;
+    resize: vertical;
+}
+
+#user-info {
+    margin: 5px 5px;
+}
+
+.input-comment::placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 5px;
+    font-size: var(--font-size-sm);
+    color: var(--color-7);
+}
+
+#user-info a {
+    text-decoration: underline;
+}
+
+.comment-infor03 {
+    /* display: none; */
+    border-left: 3px solid var(--light-color);
+}
+
+
+.child-comments {
+    margin-left: 5px;
+    font-size: var(--font-size-sm);
+
+}
+
+.child-dropdown-content01,
+.child-dropdown-content02 .child-dropdown-content03 {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .article-articlePage>.article-content {
+        margin: 0 10px;
+        width: 70%;
+        margin-bottom: 10rem;
+    }
+
+    .article-meta {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+}

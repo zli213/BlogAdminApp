@@ -1,0 +1,27 @@
+    {{> header}}
+
+            <!-- Middle body -->
+        <main class="middle_body sign-in-page">
+            <section class="first">
+                <div class="left">
+                    <div class="login-container">
+                        <div class="logo-header">
+                            <img src="./images/Sign_in_image_logo.svg" alt="logo" />
+                        </div>
+                        {{#if error}}
+                            <p id="signin-error">{{error}}</p>
+                        {{/if}}
+                        <form action="/auth/signin" method="post">
+                            <input type="text" id="username" name="username" placeholder="Username" required>
+                            <input type="password" id="password" name="password" placeholder="Password" required>
+                            <button type="submit" class="login-button">Sign In</button>
+                            <a href="/comingsoon" class="forgot-password">Forgot password?</a>
+                            <a href="/signup" class="register">Not yet registered? Sign Up</a>
+                        </form>
+                    </div>                    
+                </div>
+                <div class="right">
+                    <img id="svg-image" src="./images/Sign_in_image_right.svg"alt="SVG Image">
+                </div>
+            </section>
+        </main>

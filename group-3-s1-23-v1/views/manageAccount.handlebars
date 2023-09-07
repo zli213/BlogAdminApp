@@ -1,0 +1,89 @@
+{{> header}}
+
+
+
+<div class="middle_part">
+    {{> sidenavbar}}
+    <div class="userPageContent">
+        <h1>Manage Account</h1>
+        <div class="manageAccount-form-container">
+            <form id="manageAccount-form" action="/editAccount" method="post">
+                <input type="hidden" name="id" value="{{user.id}}">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required value="{{user.username}}">
+                <p id="username-availability" class="username-availability"></p>
+
+
+                <label for="password">Password:</label>
+
+                <button id="change-password-button" class="" type="button" onclick="changePassword()">Change
+                    Password</button>
+                <input type="password" id="password" name="password" class="change-Password-form" required
+                    placeholder="Enter new password!" disabled>
+
+                <input type="password" id="re-password" name="re-password" class="change-Password-form" required
+                    placeholder="Re-enter new password!" disabled>
+                <p id="passwords-match" class="passwords-match"></p>
+
+                <label for="first-name">First Name:</label>
+                <input type="text" id="first-name" name="fname" required value={{user.fname}}>
+
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name" name="lname" required value={{user.lname}}>
+
+                <label for="dob">Date of Birth:</label>
+                <input type="text" id="dob" name="dob" required onfocus="(this.type = 'date')" value={{user.birthdate}}>
+
+                <label for="description">Brief Description:</label>
+                <textarea id="description" name="description" required>{{user.description}}</textarea>
+
+                <label for="avatar">Avatar:</label>
+
+                <button id="change-avatar-button" class="" type="button" onclick="changeAvatar()">Change Avatar</button>
+
+
+
+                <div class="currentAvatar">
+                    <img src="{{user.avatar_src}}" class="current-avatar-img">
+                </div>
+
+                <div class="change-avatar-options">
+                    <input type="radio" id="avatar1" name="avatarSrc" class="avatar-radio" value="/images/avatar1.svg"
+                        disabled>
+                    <img src="/images/avatar1.svg" id="img-avatar1" class="avatar-image">
+
+                    <input type="radio" id="avatar2" name="avatarSrc" class="avatar-radio" value="/images/avatar2.svg"
+                        disabled>
+                    <img src="/images/avatar2.svg" id="img-avatar2" class="avatar-image">
+
+                    <input type="radio" id="avatar3" name="avatarSrc" class="avatar-radio" value="/images/avatar3.svg"
+                        disabled>
+                    <img src="/images/avatar3.svg" id="img-avatar3" class="avatar-image">
+
+                    <input type="radio" id="avatar4" name="avatarSrc" class="avatar-radio" value="/images/avatar4.svg"
+                        disabled>
+                    <img src="/images/avatar4.svg" id="img-avatar4" class="avatar-image">
+
+                    <input type="radio" id="avatar5" name="avatarSrc" class="avatar-radio" value="/images/avatar5.svg"
+                        disabled>
+                    <img src="/images/avatar5.svg" id="img-avatar5" class="avatar-image">
+
+                    <input type="radio" id="avatar6" name="avatarSrc" class="avatar-radio" value="/images/avatar6.svg"
+                        disabled>
+                    <img src="/images/avatar6.svg" id="img-avatar6" class="avatar-image">
+                </div>
+                <div id="manageBtnContainer">
+                    <button id="deleteAccountBtn" class="delete-account-button" value="deleteAccount">Delete my
+                        account</button>
+                    <button class="edit-account-button" id="editAccountBtn" value="editAccount">Save</button>
+                    <button class="reset-edit-button" type="reset">Reset</button>
+                </div>
+
+
+            </form>
+        </div>
+    </div>
+
+
+</div>
+<script src="/js/manageAccount.js"></script>

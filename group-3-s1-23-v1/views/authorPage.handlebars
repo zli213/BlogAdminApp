@@ -1,0 +1,39 @@
+{{> header}}
+
+<div class="personalPage_container">
+  <div class="personal_area">
+    {{#each currentAuthor}}
+    <div class="persnal_information">
+      <img class="pimg" src="{{this.avatar_src}}" width="199" height="198">
+      <p class="pUsername"><strong>{{this.username}}</strong></p>
+      <p class="pDescription">{{this.description}}</p>
+      <p class="countLikes-authotPage">❤ {{this.total_likes}}</p>
+    </div>
+    {{/each}}
+  </div>
+  <div class="articleList-authorPage">
+    {{#if articles}}
+    {{#each articles}}
+    <a href="/articlePage?id={{this.id}}">
+      <div class="articleList2">
+        {{!-- Create a link to the article Page --}}
+        <div class="artcleArea">
+          <div class="textArea">
+            <p class="title"><strong>{{this.title}}</strong></p>
+            <p class="time">{{this.date}}</p>
+            <p class="content">{{{this.content}}}</p>
+          </div>
+          <img class="aimg1" src="{{this.image_src}}" width="199" height="198">
+        </div>
+      </div>
+    </a>
+    {{/each}}
+    {{else}}
+    <h2>I haven't started creating yet, stay tuned for my masterpiece!</h2>
+    {{/if}}
+  </div>
+  {{!-- {{/if}} --}}
+</div>
+
+
+{{> footer}}

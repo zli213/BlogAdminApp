@@ -1,0 +1,19 @@
+.left .coming-soon-button {
+    width: 200px;
+    height: 40px;
+    display: flex;
+    justify-content: center;  /* Center the text horizontally */
+    align-items: center;  /* Center the text vertically */
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: var(--color-1);
+    color: var(--hover-light-color);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .left .coming-soon-button:hover {
+    background-color:  var(--color-5);
+    color: var(--hover-light-color);
+  }

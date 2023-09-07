@@ -1,0 +1,63 @@
+.middle_body {
+    display: flex; /* set the display to flex */
+    flex-direction: row; /* makes the elements inside this div line up in rows */
+    justify-content: center; /* center the content horizontally */
+    align-items: center; /* center the content vertically */
+    width: 100%; /* set the width to 100% of the parent container */
+  }
+  
+  .first {
+    display: flex; /* set the display to flex */
+    width: 100%; /* set the width to 100% of the parent container */
+  }
+  
+  .first .left,
+  .first .right {
+    flex: 1; /* set the flex property to 1 which means each of these elements will take up half of the space of their parent container */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* center the content horizontally */
+    padding: 10rem;
+  }
+  
+  .left .login-button {
+    width: 200px;
+    height: 40px;
+    display: flex;
+    justify-content: center;  /* Center the text horizontally */
+    align-items: center;  /* Center the text vertically */
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: var(--color-1);
+    color: var(--hover-light-color);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .left .login-button:hover {
+    background-color: var(--color-5);
+    color: var(--hover-light-color);
+  }
+  
+  #element_home {
+    color: var(--color-5);
+  }
+  
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 1rem;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: var(--secondary-background-color);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #3f4254;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #2e303b;
+  }
+  

@@ -1,0 +1,24 @@
+{{> header}}
+
+<!-- Middle body -->
+<main class="middle_body">
+    <section class="first">
+        <div class="left">
+            <h1>Welcome to the <b>Coding Blog,</b><br>Here you can..<br><span id="element_home"></span></h1><br>
+            <a href="/browsearticles"><button class="standard-button">Browse Articles</button></a>
+        </div>
+        <div class="right">
+            <img src="./images/Home Page Final Image.png" alt="home_image">
+        </div>
+    </section>
+</main>
+<!-- Middle body ends -->
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+<!-- Setup and start animation! -->
+
+<script>
+    const typed1 = new Typed('#element_home', {
+        strings: ['Connect with people!', 'Read &amp; Write Blogs!', 'Like &amp; Comment!', 'Connect with people!'],
+        typeSpeed: 100,
+    });
+</script>

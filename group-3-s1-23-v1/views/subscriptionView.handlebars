@@ -1,0 +1,146 @@
+{{> header}}
+
+{{> sidenavbar}}
+<div id="subscription_container">
+    <div class="head">
+        <h1>Subscriptions</h1>
+    </div>
+    {{#each st}}
+    <div class="subscriptionlist">
+
+        <div class="author">
+
+            <div class="author_infor01">
+
+                <div class="athor-avatar">
+                    {{!-- add a link to the personal page of the author --}}
+                    <a href="/authorPage/{{this.author_id}}">
+                        <img src="{{this.author_avatar}}" alt="avatar" class="avatar-image">
+                    </a>
+                </div>
+
+                <div class="user_information">
+
+                    <div class="article-infor01">
+                        <span class="article-author">{{this.author_name}}</span>
+                    </div>
+
+                    <div class="article-infor02">
+
+                        <div>
+                            <label class="label l-like ">
+                                <img src="/images/favorite.svg" width="15px" height="15px">
+                            </label>
+                            <span class="like-number">{{this.countLikes.count}}</span>
+                        </div>
+
+                        <div>
+                            <label class="label l-comment ">
+                                <span class="btn-text">
+                                    <i class="ri-chat-3-line btn-icon"></i>
+                                </span>
+                            </label>
+                            <span class="comment-number">{{this.countComments.count}}</span>
+                        </div>
+
+                    </div>
+
+                    <div class="article-infor03">
+                        <button class="btn btn-subscription" data-author-id="{{this.author_id}}">Subscribed</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="article_display">
+            {{#if this.recent_article_id}}
+            <form action="/articlePage" method="get">
+
+                <div class="newest_article" id="{{this.recent_article.id}}">
+
+                    <img class="newest_article_img" src="{{this.recent_article.image_src}}">
+
+                    <div class="newest_article_infor">
+
+                        <button type="submit" class="btn btn-article" name="id" value="{{this.recent_article.id}}">
+
+                            <i class="ri-book-3-line btn-icon"></i>
+
+                            <div class="newest_article_title">
+
+                                <span style="color: var(--color-4)">{{this.recent_article.title}}</span>
+
+                            </div>
+
+                        </button>
+
+                        <div class="newest_article_content">
+
+                            <p><span style="color: var(--color-4)">The latest article</span></p>
+
+                        </div>
+
+                        <div class="newest_article_date">
+
+                            <span style="color: var(--color-4)">{{this.recent_article.date}}</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </form>
+
+            <form action="/articlePage" method="get">
+
+                <div class="popular_article">
+
+                    <img class="popular_article_img" src="{{this.popular_article.image_src}}">
+
+                    <div class="popular_article_infor">
+
+                        <button type="submit" class="btn btn-article" name="id" value="{{this.popular_article.id}}">
+                            <i class="ri-book-3-line btn-icon"></i>
+
+                            <div class="popular_article_title">
+                                <span style="color: var(--color-4)">{{this.popular_article.title}}</span>
+                            </div>
+
+                        </button>
+
+                        <div class="popular_article_content">
+
+                            <p><span style="color:var(--color-4)">The most popular article</span></p>
+
+                        </div>
+
+                        <div class="popular_article_date">
+
+                            <span style="color:var(--color-4)">{{this.popular_article.date}}</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </form>
+            {{/if}}
+            <div class="more_article">
+
+                <a href="/authorPage/{{this.author_id}}">
+
+                    <p>More...</p>
+
+                </a>
+
+            </div>
+
+        </div>
+    </div>
+    {{/each}}
+</div>
+{{> footer}}
+<script src="/js/subscription.js"></script>

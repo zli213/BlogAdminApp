@@ -1,0 +1,94 @@
+{{!-- {{!
+Guide to Handlebars Partials in this Project:
+
+Handlebars is a templating language that allows us to build semantic templates effectively with no frustration. One of
+its powerful features is 'partials'.
+
+A 'partial' in Handlebars is a snippet of HTML that can be reused in multiple places. This allows us to avoid
+duplication, enhance readability, and ease maintenance.
+
+Partials are registered using the following syntax:
+
+Handlebars.registerPartial('partialName', 'partial template')
+
+Once registered, they can be used within other templates using the following syntax:
+
+{{> partialName}}
+
+In this project, we use partials extensively for common sections of the website. Here are some examples:
+
+{{! This is the header partial that contains the website's header section. It includes the navigation menu and logo. }}
+{{> header}}
+
+{{! This is the footer partial that contains the website's footer section. It includes copyright information and links
+to other pages. }}
+{{> footer}}
+
+{{! This is the sidenavbar partial that contains the website's footer section. It includes copyright information and
+links to other pages. }}
+{{> sidenavbar}}
+
+Please consider using and extending the existing partials before creating new sections from scratch. If you need to
+create a new partial, remember to register it before using it. --}}
+
+<!-- Side nav bar in user page -->
+<div id="userPageSideNav">
+                <p><img src="{{user.avatar_src}}" id="avatarImg"></p>
+                <div id="userNameNavbar">
+                    <p>{{user.username}}</p>
+                    <p>{{capitalize user.fname}} {{capitalize user.lname}}</p>
+                </div>
+                
+            <ul>
+                <li>
+                    <div id="container">
+                        <a href="/userBrowsing">
+                        <div><img src="./images/timeline.png" alt=""></div>
+                        <div id="listStr">Browse my articles</div>
+                        </a>
+                    </div>
+                    
+                </li>
+                <li>
+                    <div id="container">
+                        <a href="/analytics">
+                        <div><img src="./images/monitoring.png" alt=""></div>
+                        <div id="listStr">Analytics</div>
+                        </a>
+                    </div>
+                    
+                </li>
+                <li>
+                    <div id="container">
+                        <a href="/subscriptions">
+                        <div><img src="./images/group.png" alt=""></div>
+                        <div id="listStr">Subscriptions</div>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div id="container">
+                        <a href="/subscribeView">
+                        <div><img src="./images/group.png" alt=""></div>
+                        <div id="listStr">Subscribers</div>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div id="container">
+                        <a href="/createArticle">
+                        <div> <img src="./images/write.png" alt=""></div>
+                        <div id="listStr">Write new article</div>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div id="container">
+                        <a href="/manageAccount">
+                        <div><img src="./images/manage_accounts.png" alt=""></div>
+                        <div id="listStr">Manage account</div>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>

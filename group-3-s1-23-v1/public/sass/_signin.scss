@@ -1,0 +1,104 @@
+/* sign in page css */
+#svg-image {
+    width: 50rem;
+    margin: 80px auto var(--margin-md);
+}
+.login-container {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 80px auto var(--margin-md);
+    padding: var(--margin-sm);
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px var(--transparent-light-color);
+    background-color: var(--primary-background-color);
+}
+
+.logo-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: var(--gap);
+}
+
+.logo-header img {
+    width: 30%;
+}
+
+.login-container {
+    width: 100%; /* Makes sure your login container takes up the full space available */
+    max-width: 300px; /* But doesn't get bigger than 300px */
+  }
+
+.login-container form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+}
+
+.login-container input {
+    padding: var(--font-size-xsm);
+    border: 1px solid var(--light-color-alt);
+    border-radius: 5px;
+}
+
+.login-container .login-button {
+    padding: 5px 0;
+    border-radius: 5px;
+    background-color: var(--color-1);
+    color: var(--hover-light-color);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.login-container .login-button:hover {
+    background-color: var(--color-5);
+    color: var(--hover-light-color);
+}
+
+.forgot-password:hover, .register:hover {
+    color: var(--color-5);
+}
+
+.login-container a {
+    text-align: center;
+    color: var(--light-color);
+}
+
+.login-container .register {
+    margin-top: var(--gap);
+}
+.sign-in-page .first {
+    display: flex;
+    width: 100%;
+    max-width: 80%; /* limit the width to 80% of the parent container */
+    align-items: start;
+    justify-content: center; /* align items to center */
+    padding: var(--gap);
+  }
+  
+ .sign-in-page .first .left,
+  .sign-in-page .first .right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--gap); /* add padding to maintain some space around */
+  }
+
+  .sign-in-page .login-container {
+    width: 100%; /* Makes sure your login container takes up the full space available */
+    max-width: 300px; /* But doesn't get bigger than 300px */
+  }
+
+  .sign-in-page .middle_body {
+    display: flex; /* set the display to flex */
+    flex-direction: row; /* makes the elements inside this div line up in rows */
+    justify-content: center; /* center the content horizontally */
+    align-items: center; /* center the content vertically */
+    width: 100%;
+    padding-top: var(--margin-md);
+  }

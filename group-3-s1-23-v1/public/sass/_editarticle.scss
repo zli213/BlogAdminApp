@@ -1,0 +1,85 @@
+#page-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;  
+}
+
+#main-container {
+    display: flex;
+    margin-top: 60px;
+}
+
+#sidenavbar {
+    flex-basis: 20%;
+}
+
+#main-content-area {
+    margin-top: 10px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    width: 60vw;
+    margin-left: 30vw;
+}
+
+#title {
+    padding: 5px;
+    margin: 5px;
+    font-size: var(--font-size-lg);
+    width: 60vw;
+    text-align: center;
+}
+
+#editor {
+    margin: 5px;
+    width: 60vw;
+    border: 1px var(--color-2) solid;
+    border-radius: 5px;
+}
+
+#imageUploadForm {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    width: 60vw;
+}
+
+#imageUploadForm label {
+    margin: 0 1vw 0 7vw;
+}
+
+#imageUpload {
+    max-width: 25vw;
+}
+
+#imageUploadSuccess, #imageUploadFailure {
+    display: none;
+}
+
+
+#button-group {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 10px; /* Adjusted to add padding on both top and bottom */
+    margin: 5px;
+}
+
+#button-group button {
+    padding: 5px 5px;
+    border-radius: 5px;
+    background-color: var(--color-1);
+    color: var(--hover-light-color);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#button-group button:hover {
+    background-color: var(--color-5);
+    color: var(--hover-light-color);
+}
+
+

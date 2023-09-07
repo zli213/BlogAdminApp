@@ -1,0 +1,52 @@
+/* Install SASS:
+
+Ensure that Node.js and npm are installed. If not, visit Node.js and download the appropriate package. This installation will also come with npm.
+In your terminal, run npm install sass. you can also run npm install -g sass which will install SASS globally on your machine.
+
+Accessing the SASS directory:
+
+Within the project, there is a directory named sass in the public folder. This is where you'll keep all your SASS files.
+
+Creating a new SASS file:
+
+Whenever you create a new SASS file, name it starting with an underscore. For example, _home.scss, _about.scss, etc. This denotes that these are partial files, i.e., they're meant to be imported into a main file and not compiled into individual CSS files. Store these files in the public/sass directory that is present.
+
+Importing the SASS file in main.scss:
+
+Open the main.scss file (which should be in the public/sass directory). To import a new SASS file into this, use the @import directive followed by the name of the file. Don't include the underscore or the file extension. For example, if you've created a _home.scss file, you can import it into main.scss like so: @import 'home';. Repeat this process every time a new SASS file is created. Remember that the order of import matters. The CSS will be compiled in the order that you list the files. Any variables or mixins should be imported before they're used.
+
+Compiling SASS to CSS:
+
+After you've finished editing your SASS files, you need to compile them into a CSS file that the browser can interpret. To do this, run sass public/sass/main.scss public/css/main.css in your terminal. This will take your main.scss file and any files it's importing, and compile them into a main.css file in the public/css directory.
+Note: If you're using the watcher (see below), you don't need to manually compile your SASS files.
+
+Watching for changes:
+
+Instead of manually compiling your SASS to CSS every time you make a change, you can set up a watcher that will automatically compile your SASS files whenever they're saved.
+Run sass --watch public/sass:public/css in your terminal. This will watch your public/sass directory for any changes, and when a file is saved, it will automatically compile it into your public/css directory.
+
+The watcher will continue running in your terminal until you stop it. To stop the watcher, use Ctrl + C in your terminal.
+Note: If there's an error in your SASS (like a missing semicolon), the watcher will display the error in your terminal but won't update the CSS until the error is fixed.*/
+
+@import 'root';
+@import 'home';
+@import 'header';
+@import 'footer';
+@import 'contact';
+@import 'about';
+@import 'signin';
+@import 'signup';
+@import 'signupSuccess';
+@import 'errorpage';
+@import 'comingsoon';
+@import 'userAnalytics';
+@import 'sideNavbar';
+@import 'userBrowsing';
+@import 'manageAccount';
+@import 'browsearticles';
+@import 'subscribeView';
+@import 'subscriptionView';
+@import 'authorPage';
+@import 'editarticle';
+@import 'articlePage';
+@import 'notifications';

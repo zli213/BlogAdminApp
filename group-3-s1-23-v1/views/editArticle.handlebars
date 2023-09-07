@@ -1,0 +1,39 @@
+<!-- Include Quill stylesheet -->
+<link href="https://cdn.quilljs.com/1.0.0/quill.snow.css" rel="stylesheet">
+
+<!-- Create the editor container -->
+{{> header}}
+<div id="main-container">
+    {{> sidenavbar}}
+    <div id="main-content-area">
+        <input type="text" name="title" id="title" maxlength="50" {{#if article}}value="{{article.title}}"
+            {{else}}placeholder="Input a title for your article" {{/if}}>
+        <div id="editor">{{#if article}}{{{content}}}{{/if}}</div>
+        <form id="imageUploadForm" action="/api/addImage" method="POST" enctype="multipart/form-data"
+            {{#if article}}data-article-img-src="{{article.image_src}}" data-article-id="{{article.id}}"{{/if}}>
+            <div id="imageUploadDiv">
+                <label for="imageUpload">Upload a cover image:</label>
+                <!-- The "accept" attribute can provide a filter for suggested file types - but
+                    we CANNOT prevent the user from selecting anything (we have to do that server-side). -->
+                <input id="imageUpload" type="file" name="imageUpload" accept=".png,.jpg,.jpeg,.bmp,.svg">
+            </div>
+            <button type="submit" id="imageUploadSubmit" class="standard-button">Upload</button>
+        </form>
+        <p id="imageUploadSuccess">Your image has been successfully uploaded</p>
+        <p id="imageUploadFailure">Your image failed to upload. Please try again.</p>
+        <div id="button-group">
+            <button id="clear-btn" class="standard-button">Clear</button>
+            {{#if article}}
+                <button id="update-btn" class="standard-button">Update</button>
+                <button id="delete-btn" class="standard-button">Delete</button>
+            {{else}}
+                <button id="publish-btn" class="standard-button">Publish</button>
+            {{/if}}
+        </div>
+    </div>
+</div>
+
+<!-- Include the Quill library -->
+<script src='https://cdn.quilljs.com/1.0.0/quill.js'></script>
+
+<script src='/js/editArticle.js'></script>
